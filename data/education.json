@@ -1,5 +1,5 @@
 {
-  "schools": [
+  "data": [
     {
       "name": "Trinity College",
       "location": "Hartford, CT",
@@ -13,24 +13,6 @@
     }
   ],
 
-  "onlineCourses": [
-    {
-      "title": "Intro Machine Learning",
-      "school": "Coursera",
-      "date": 1433116800000,
-      "url": "www.coursera.org/learn/machine-learning"
-    }, {
-      "title": "Introduction to Parallel Programming with CUDA",
-      "school": "Udacity",
-      "date": 1388534400000,
-      "url": "www.udacity.com/course/intro-to-parallel-programming--cs344"
-    }, {
-      "title": "Front-end Development Nanodegree",
-      "school": "Udacity",
-      "date": 1436659200000,
-      "url": "www.udacity.com/course/intro-to-parallel-programming--cs344"
-    }
-  ],
-
-  "display": "displayEducation"
+  "component": "school-attended",
+  "parent": "#schools"
 }

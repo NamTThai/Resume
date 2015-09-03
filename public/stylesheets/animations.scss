@@ -1,9 +1,4 @@
 #headerNavigation {
-  height: 6em;
   transition-duration: 0.3s;
   transition-property: height;
-}
-
-#headerNavigation.tallHeader {
-  height: 500px;
 }

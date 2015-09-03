@@ -1,0 +1,33 @@
+<dom-module id="school-attended">
+  <style>
+  </style>
+
+  <template>
+    <div class="row">
+      <span id="name">[[school.name]]</span>
+      &nbsp;<span>-</span>&nbsp;
+      <span id="degree">[[school.degree]]</span>
+    </div>
+    <div class="row">
+      <span id="year">[[school.year]]</span>
+      <span class="flex"></span>
+      <span id="location">[[school.location]]</span>
+    </div>
+    <div class="row">
+      <span>Major:</span>&nbsp;
+      <span>[[school.major]]</span>
+    </div>
+  </template>
+</dom-module>
+
+<script>
+  Polymer({
+    is: "school-attended",
+
+    initialize: function(school) {
+      school.major = school.majors.join(", ");
+      school.year = (new Date(school.dates)).getFullYear();
+      this.school = school;
+    }
+  })
+</script>

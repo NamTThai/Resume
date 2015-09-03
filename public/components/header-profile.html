@@ -1,0 +1,58 @@
+<dom-module id="header-profile">
+  <style>
+
+  </style>
+
+  <template>
+    <div id="headerRow" class="row">
+      <span id="header">[[header.name]]</span>
+      <span id="role">[[header.role]]</span>
+    </div>
+    <div class="row">
+      <div class="col-2">
+        <span class="media-title">mobile</span>
+        <span class="media-content">[[header.contacts.mobile]]</span>
+      </div>
+      <div class="col-3">
+        <span class="media-title">email</span>
+        <span class="media-content">[[header.contacts.email]]</span>
+      </div>
+      <div class="col-2">
+        <span class="media-title">github</span>
+        <span class="media-content">[[header.contacts.github]]</span>
+      </div>
+      <div class="col-2">
+        <span class="media-title">twitter</span>
+        <span class="media-content">[[header.contacts.twitter]]</span>
+      </div>
+      <div class="col-3">
+        <span class="media-title">location</span>
+        <span class="media-content">[[header.contacts.location]]</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <iron-image src="[[header.biopic]]" preload fade sizing="cover" width=250 height=250></iron-image>
+      </div>
+      <div class="col-9">
+        <p id="welcome">[[header.welcomeMessage]]</p>
+        <header id="skillHeader">Skills at a Glance:</header>
+        <ul id="skills">
+          <template is="dom-repeat" items="[[header.skills]]">
+            <li class="skill-item">[[item]]</li>
+          </template>
+        </ul>
+      </div>
+    </div>
+  </template>
+</dom-module>
+
+<script>
+  Polymer({
+    is: "header-profile",
+
+    initialize: function(header) {
+      this.header = header;
+    }
+  });
+</script>

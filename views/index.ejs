@@ -7,6 +7,7 @@
 
   <!-- Import various awesome support libraries -->
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
   <!-- Fonts -->
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway" type="text/css">
@@ -22,14 +23,20 @@
   <link rel="stylesheet" href="http://normalize-css.googlecode.com/svn/trunk/normalize.css">
 
   <!-- Components, Styles and Scripts import -->
+  <script src="javascripts/scripts.js"></script>
   <link rel="import" href="components/components.vulcanized.html">
   <link rel="stylesheet" href="stylesheets/styles.css">
 
   <!-- My components in development -->
   <link rel="import" href="components/custom-style.html">
   <link rel="import" href="components/event-listener.html">
+  <link rel="import" href="components/header-profile.html">
+  <link rel="import" href="components/online-course.html">
+  <link rel="import" href="components/project-experience.html">
   <link rel="import" href="components/resource-num.html">
   <link rel="import" href="components/responsive.html">
+  <link rel="import" href="components/school-attended.html">
+  <link rel="import" href="components/work-experience.html">
 
 </head>
 <body class="fullbleed layout vertical">
@@ -46,8 +53,8 @@
         <paper-header-panel id="headerPanel" mode="waterfall" on-content-scroll="navigationbarScrollHandler">
           <paper-material id="navigationbar" class="paper-header" elevation="2">
             <header id="headerNavigation" class="tallHeader">
-              <iron-image id="headerGallery" src="images/gallery1.png" preload fade sizing="contain"></iron-image>
               <div id="subHeaderNavigation" class="row">
+                <iron-image id="profilePict" src="images/profile.png" preload fade sizing="contain"></iron-image>
                 <h1 id="headerTitle">NAM THAI</h1>
                 <span class="flex"></span>
                 <paper-button class="navigationbar-button" on-click="reroute" hash="#works">
@@ -78,22 +85,15 @@
             <section id="bumper"></section>
             <section id="works">
               <h2 class="portfolio-content-header">Work Experiences</h2>
-              <img src="http://placekitten.com/g/800/800"></img>
-              <img src="http://placekitten.com/g/800/800"></img>
-              <img src="http://placekitten.com/g/800/800"></img>
-              <img src="http://placekitten.com/g/800/800"></img>
-              <img src="http://placekitten.com/g/800/800"></img>
-              <img src="http://placekitten.com/g/800/800"></img>
-              <img src="http://placekitten.com/g/800/800"></img>
-
-              <img src="http://placekitten.com/g/800/800"></img>
-              <img src="http://placekitten.com/g/800/800"></img>
             </section>
             <section id="projects">
               <h2 class="portfolio-content-header">Projects</h2>
             </section>
             <section id="education">
               <h2 class="portfolio-content-header">Education</h2>
+              <div id="schools"></div>
+              <h3 class="portfolio-content-subhearder">Online Classes</h3>
+              <div id="online"></div>
             </section>
             <section id="trail">
               <h2 class="portfolio-content-header">Where I Have Worked and Lived</h2>

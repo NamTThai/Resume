@@ -8,10 +8,16 @@ body {
 }
 
 #headerNavigation {
+  height: 6em;
   position: relative;
 }
 
+#headerNavigation header-profile {
+  display: none;
+}
+
 #headerNavigation.tallHeader {
+  height: 400px;
   background: #004D40;
 }
 
@@ -21,6 +27,10 @@ body {
 
 #headerNavigation.tallHeader #headerTitle {
   display: none;
+}
+
+#headerNavigation.tallHeader header-profile {
+  display: block;
 }
 
 #headerNavigation.tallHeader #subHeaderNavigation {

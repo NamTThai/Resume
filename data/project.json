@@ -1,5 +1,5 @@
 {
-  "projects": [
+  "data": [
     {
       "title": "Pokemon Showdown Android Simulator",
       "dateStart": 1406851200000,
@@ -9,6 +9,11 @@
         "Design, implement and test Android version of Showdown",
         "Lead a team of Android developers and review their contributions",
         "After the first 7 days on the Play Store, it gets a rating of 4.5/1121 reviews and 27,907 net installs"
+      ],
+      "images": [
+        "./images/showdown.png",
+        "./images/showdown-whatis.png",
+        "./images/showdown-review.png"
       ]
     }, {
       "title": "Multi-GPU Bisection Algorithm for Tri-diagonal Symmetric Eigenvalue Problem",
@@ -17,9 +22,12 @@
       "description": [
         "Take advantage of parallel programming on 4 GPUs to speed up eigenvalue calculation by approximately 60% comparing to 1 GPU",
         "Present poster at GPU Technology Conference 2015 (San Jose, CA)"
+      ],
+      "images": [
+        "./images/gtc.png"
       ]
     }
   ],
-
-  "display": "displayProject"
+  "component": "project-experience",
+  "parent": "#projects"
 }

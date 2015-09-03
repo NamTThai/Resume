@@ -1,5 +1,5 @@
 {
-  "jobs": [
+  "data": [
     {
       "employer": "CIO Solutions",
       "title": "Software Engineer",
@@ -23,6 +23,6 @@
       ]
     }
   ],
-
-  "display": "displayJobs"
+  "component": "work-experience",
+  "parent": "#works"
 }

@@ -1,0 +1,25 @@
+<dom-module id="online-course">
+  <style>
+  </style>
+
+  <template>
+    <div class="row">
+      <span>[[course.title]]</span>
+      &nbsp;<span>-</span>&nbsp;
+      <span>[[course.school]]</span>
+    </div>
+    <span>[[course.year]]</span>
+    <a href="[[course.url]]" target="_blank">[[course.url]]</a>
+  </template>
+</dom-module>
+
+<script>
+  Polymer({
+    is: "online-course",
+
+    initialize: function(course) {
+      course.year = (new Date(course.dates)).getFullYear();
+      this.course = course;
+    }
+  });
+</script>

@@ -1,0 +1,46 @@
+<dom-module id="work-experience">
+  <style>
+  </style>
+
+  <template>
+    <div class="row">
+      <span id="employer">[[job.employer]]</span>
+      &nbsp;<span>-</span>&nbsp;
+      <span id="title">[[job.title]]</span>
+    </div>
+    <div class="row">
+      <span id="date">[[job.date]]</span>
+      <span class="flex"></span>
+      <span id="location">[[job.location]]</span>
+    </div>
+    <div>
+      <ul>
+        <template is="dom-repeat" items="[[job.description]]">
+          <li>[[item]]</li>
+        </template>
+      </ul>
+    </div>
+  </template>
+</dom-module>
+
+<script>
+  Polymer({
+    is: "work-experience",
+
+    initialize: function(job) {
+      job.date = this.setDate(job.dateStart, job.dateEnd);
+      this.job = job;
+    },
+
+    setDate: function(dateStart, dateEnd) {
+      var options = {
+        year: "numeric",
+        month: "short"
+      }
+      dateStart = (new Date(dateStart)).toLocaleDateString("en-us", options);
+      dateEnd = (dateEnd) ? (new Date(dateEnd)).toLocaleDateString("en-us", options)
+        : "Present";
+      return dateStart + " - " + dateEnd;
+    }
+  });
+</script>
