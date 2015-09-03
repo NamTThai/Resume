@@ -1,0 +1,118 @@
+/* Styling the navigationbar to match with device width */
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.paper-header {
+  background-color: #1b5e20;
+}
+
+#headerNavigation {
+  position: relative;
+}
+
+#headerNavigation.tallHeader {
+  background: #004D40;
+}
+
+#headerNavigation.tallHeader #profilePict {
+  display: none;
+}
+
+#headerNavigation.tallHeader #headerTitle {
+  display: none;
+}
+
+#headerNavigation.tallHeader #subHeaderNavigation {
+  background-color: rgba(27, 94, 32, 0.5);
+}
+
+#headerNavigation.tallHeader #headerGallery {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+#subHeaderNavigation {
+  position: absolute;
+  bottom: 0;
+  padding: 1em;
+  width: 100%;
+}
+
+#headerGallery {
+  display: none;
+}
+
+#headerTitle {
+  color: white;
+  margin: 0 0 0 1.2em;
+}
+
+#profilePict {
+  width: 48px;
+  height: 48px;
+  margin: 0 0 0 0.7em;
+  background-color: lightgray;
+}
+
+.navigationbar-button {
+  background: none;
+  color: white;
+  margin: 0;
+}
+
+.navigationbar-button:hover {
+  color: #eeff41;
+}
+
+/* Styling the main content */
+
+#mainContainer {
+  width: 100%;
+  background: linear-gradient(to right, #F1F8E9, #C5E1A5, #F1F8E9);
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-weight: 200;
+}
+
+#bumper {
+  height: 5em;
+  width: 100%;
+}
+
+#bumperBottom {
+  height: 6em;
+  width: 100%;
+  display: none;
+}
+
+.portfolio-content-header {
+  margin: 0 0 0.5em 3em;
+  padding: 1em 0 0 0;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+#featuresWrapper {
+  align-items: baseline;
+}
+
+#fabContainer {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#scrollToTop {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  display: none;
+}

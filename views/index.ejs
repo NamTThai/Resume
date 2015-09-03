@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Nam Thai Resume</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Import various awesome support libraries -->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway" type="text/css">
+
+  <!--  Load webcomponents-lite.min.js for polyfill support. -->
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+
+  <!-- Import enquire for javascript responsive support -->
+  <script src="bower_components/media-match/media.match.min.js"></script>
+  <script src="bower_components/enquire/dist/enquire.min.js"></script>
+
+  <!-- Normailze stylesheet for cross-browser support -->
+  <link rel="stylesheet" href="http://normalize-css.googlecode.com/svn/trunk/normalize.css">
+
+  <!-- Components, Styles and Scripts import -->
+  <link rel="import" href="components/components.vulcanized.html">
+  <link rel="stylesheet" href="stylesheets/styles.css">
+
+  <!-- My components in development -->
+  <link rel="import" href="components/custom-style.html">
+  <link rel="import" href="components/event-listener.html">
+  <link rel="import" href="components/resource-num.html">
+  <link rel="import" href="components/responsive.html">
+
+</head>
+<body class="fullbleed layout vertical">
+  <template id="eventListener" is="dom-bind">
+    <paper-drawer-panel id="mainDrawerPanel" force-narrow>
+      <paper-menu drawer selected="0">
+        <paper-item hash="#works" on-click="reroutePanel">Works</paper-item>
+        <paper-item hash="#projects" on-click="reroutePanel">Projects</paper-item>
+        <paper-item hash="#education" on-click="reroutePanel">Education</paper-item>
+        <paper-item hash="#trail" on-click="reroutePanel">Trail</paper-item>
+        <paper-item hash="#contact" on-click="reroutePanel">Contact</paper-item>
+      </paper-menu>
+      <section main class="relative">
+        <paper-header-panel id="headerPanel" mode="waterfall" on-content-scroll="navigationbarScrollHandler">
+          <paper-material id="navigationbar" class="paper-header" elevation="2">
+            <header id="headerNavigation" class="tallHeader">
+              <iron-image id="headerGallery" src="images/gallery1.png" preload fade sizing="contain"></iron-image>
+              <div id="subHeaderNavigation" class="row">
+                <h1 id="headerTitle">NAM THAI</h1>
+                <span class="flex"></span>
+                <paper-button class="navigationbar-button" on-click="reroute" hash="#works">
+                  works
+                  <a ></a>
+                </paper-button>
+                <paper-button class="navigationbar-button" on-click="reroute" hash="#projects">
+                  projects
+                  <a ></a>
+                </paper-button>
+                <paper-button class="navigationbar-button" on-click="reroute" hash="#education">
+                  education
+                  <a ></a>
+                </paper-button>
+                <paper-button class="navigationbar-button" on-click="reroute" hash="#trail">
+                  trail
+                  <a ></a>
+                </paper-button>
+                <paper-button class="navigationbar-button" on-click="reroute" hash="#contact">
+                  contact
+                  <a ></a>
+                </paper-button>
+              </div>
+            </header>
+          </paper-material>
+
+          <div id="portfolioContent" class="content">
+            <section id="bumper"></section>
+            <section id="works">
+              <h2 class="portfolio-content-header">Work Experiences</h2>
+              <img src="http://placekitten.com/g/800/800"></img>
+              <img src="http://placekitten.com/g/800/800"></img>
+              <img src="http://placekitten.com/g/800/800"></img>
+              <img src="http://placekitten.com/g/800/800"></img>
+              <img src="http://placekitten.com/g/800/800"></img>
+              <img src="http://placekitten.com/g/800/800"></img>
+              <img src="http://placekitten.com/g/800/800"></img>
+
+              <img src="http://placekitten.com/g/800/800"></img>
+              <img src="http://placekitten.com/g/800/800"></img>
+            </section>
+            <section id="projects">
+              <h2 class="portfolio-content-header">Projects</h2>
+            </section>
+            <section id="education">
+              <h2 class="portfolio-content-header">Education</h2>
+            </section>
+            <section id="trail">
+              <h2 class="portfolio-content-header">Where I Have Worked and Lived</h2>
+            </section>
+            <section id="contact">
+
+            </section>
+            <section id="bumperBottom"></section>
+          </div>
+        </paper-header-panel>
+        <div id="fabContainer" class="content">
+          <paper-fab id="scrollToTop" on-click="scrollToTop" icon="expand-less"></paper-fab>
+        </div>
+      </section>
+    </paper-drawer-panel>
+  </template>
+</body>
+</html>

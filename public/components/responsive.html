@@ -1,0 +1,23 @@
+<script>
+
+  'use strict';
+
+  document.addEventListener('WebComponentsReady', function() {
+    enquire.register("only screen and (max-width: " + headerResponsiveScreenSize + ")", {
+      match: function() {
+        document.querySelector("#profilePict").setAttribute("paper-drawer-toggle", true);
+        $(".navigationbar-button").hide();
+        _colapseHeader();
+        document.querySelector("#bumper").style.display = "none";
+        document.querySelector("#bumperBottom").style.display = "block";
+      },
+      unmatch: function() {
+        document.querySelector("#profilePict").removeAttribute("paper-drawer-toggle");
+        $(".navigationbar-button").show();
+        document.querySelector("#bumper").style.display = "block";
+        document.querySelector("#bumperBottom").style.display = "none";
+      }
+    }, true);
+  });
+
+</script>
