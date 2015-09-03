@@ -1,0 +1,28 @@
+{
+  "jobs": [
+    {
+      "employer": "CIO Solutions",
+      "title": "Software Engineer",
+      "location": "Santa Barbara, CA",
+      "dateStart": 1438128000000,
+      "description": [
+        "Be the lead software engineer",
+        "Write software to automate previously-manual tasks: mine data from ticket database, scrape internal applications for data to generate reports, automate backup jobs, etc."
+      ]
+    }, {
+      "employer": "ESPN",
+      "title": "Project Engineer",
+      "location": "Bristol",
+      "dateStart": 1404172800000,
+      "dateEnd": 1433030400000,
+      "description": [
+        "Integrate UI testing automation into ESPN's continuous integration process",
+        "Implement template matching tool, potentially cutting down manual testing by 66.21%",
+        "Review code submission from ESPN's vendor",
+        "Maintain old test suites"
+      ]
+    }
+  ],
+
+  "display": "displayJobs"
+}

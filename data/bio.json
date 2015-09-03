@@ -1,0 +1,21 @@
+{
+  "name": "Nam Thai",
+  "role": "Software Engineer",
+  "contacts": {
+    "mobile": "xxx - xxx - xxxx",
+    "email": "nam.thai.cs@gmail.com",
+    "github": "github.com/NamTThai",
+    "twitter": "@nthai92",
+    "location": "Santa Barbara, CA"
+  },
+  "welcomeMessage": "It's a pleasure to see you!",
+  "skills": [
+    "Java",
+    "Android",
+    "HTML", "CSS", "JavaScript",
+    "Node.js", "PHP",
+    "Git"
+  ],
+  "biopic": "images/profile.png",
+  "display": "displayHeader"
+}
