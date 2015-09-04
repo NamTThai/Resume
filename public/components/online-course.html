@@ -3,13 +3,15 @@
   </style>
 
   <template>
-    <div class="row">
-      <span>[[course.title]]</span>
-      &nbsp;<span>-</span>&nbsp;
-      <span>[[course.school]]</span>
+    <div class="section-wrapper">
+      <div class="section-header row">
+        <span>[[course.title]]</span>
+        &nbsp;<span>-</span>&nbsp;
+        <span>[[course.school]]</span>
+      </div>
+      <div class="section-subheader">[[course.year]]</div>
+      <a href="[[course.url]]" target="_blank">[[course.url]]</a>
     </div>
-    <span>[[course.year]]</span>
-    <a href="[[course.url]]" target="_blank">[[course.url]]</a>
   </template>
 </dom-module>
 

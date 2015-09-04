@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="stylesheets/styles.css">
 
   <!-- My components in development -->
+  <link rel="import" href="components/contact-info.html">
   <link rel="import" href="components/custom-style.html">
   <link rel="import" href="components/header-profile.html">
   <link rel="import" href="components/interactive-map.html">
@@ -49,7 +50,7 @@
         <paper-item hash="#trail" on-click="reroutePanel">Trail</paper-item>
         <paper-item hash="#contact" on-click="reroutePanel">Contact</paper-item>
       </paper-menu>
-      <section main class="relative">
+      <section main class="relative" on-new-location="addLocationToMap" on-new-contacts="setContacts">
         <paper-header-panel id="headerPanel" mode="waterfall" on-content-scroll="navigationbarScrollHandler">
           <paper-material id="navigationbar" class="paper-header" elevation="2">
             <header id="headerNavigation" class="tallHeader">
@@ -81,7 +82,7 @@
             </header>
           </paper-material>
 
-          <div id="portfolioContent" class="content" on-new-location="addLocationToMap">
+          <div id="portfolioContent" class="content">
             <section id="bumper"></section>
             <section id="works">
               <h2 class="portfolio-content-header">Work Experiences</h2>
@@ -92,7 +93,7 @@
             <section id="education">
               <h2 class="portfolio-content-header">Education</h2>
               <div id="schools"></div>
-              <h3 class="portfolio-content-subhearder">Online Classes</h3>
+              <h3 class="portfolio-content-subheader">Online Classes</h3>
               <div id="online"></div>
             </section>
             <section id="trail">
@@ -100,7 +101,10 @@
               <interactive-map></interactive-map>
             </section>
             <section id="contact">
-
+              <div id="connect">
+                <div id="connectContent">Let's Connect!</div>
+              </div>
+              <contact-info id="contactInfo"></contact-info>
             </section>
             <section id="bumperBottom"></section>
           </div>

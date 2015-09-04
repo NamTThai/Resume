@@ -17,7 +17,7 @@ body {
 }
 
 #headerNavigation.tallHeader {
-  height: 400px;
+  height: 450px;
   background: #004D40;
 }
 
@@ -110,6 +110,14 @@ body {
   font-weight: 300;
 }
 
+.portfolio-content-subheader {
+  margin: 0 0 0.5em 3em;
+  padding: 1em 0 0 0;
+  font-size: 1.3em;
+  font-style:italic;
+  font-weight: 300;
+}
+
 #featuresWrapper {
   align-items: baseline;
 }
@@ -125,4 +133,36 @@ body {
   bottom: 50px;
   right: 50px;
   display: none;
+}
+
+.section-wrapper {
+  margin: 24px;
+}
+
+.section-header {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #01579B;
+}
+
+.section-subheader {
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+#connect {
+  width: 100%;
+  padding: 6px;
+  background-color: #827717;
+  position: relative;
+}
+
+#connectContent {
+  margin: 12px auto;
+  color: #CFD8DC;
+  width: 200px;
+}
+
+#contactInfo {
+  padding: 6px;
 }

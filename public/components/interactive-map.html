@@ -32,15 +32,16 @@ https://github.com/udacity/frontend-nanodegree-resume/blob/master/js/helper.js -
 
     addLocationToMap: function(location) {
       this.push('locations', location);
+      this.pinPoster(location);
     },
 
     /*
     callback(results, status) makes sure the search returned results for a location.
     If so, it creates a new map marker for that location.
     */
-    callback: function(results, status) {
+    callback: function(results, status, poly) {
       if (status == google.maps.places.PlacesServiceStatus.OK) {
-        createMapMarker(results[0]);
+        poly.createMapMarker(results[0]);
       }
     },
 
@@ -66,8 +67,7 @@ https://github.com/udacity/frontend-nanodegree-resume/blob/master/js/helper.js -
 
       // hmmmm, I wonder what this is about...
       google.maps.event.addListener(marker, 'click', function(event) {
-        console.log(event);
-        console.log(market);
+        alert("That's " + marker.title + "!");
       });
 
       // this is where the pin actually gets added to the map.
@@ -79,22 +79,15 @@ https://github.com/udacity/frontend-nanodegree-resume/blob/master/js/helper.js -
       this.map.setCenter(bounds.getCenter());
     },
 
-    logClicks: function(x, y) {
-      this.push('clickLocations',
-        {
-          x: x,
-          y: y
-        }
-      );
-      console.log('x location: ' + x + '; y location: ' + y);
-    },
-
     pinPoster: function(location) {
+      var poly = this;
       var service = new google.maps.places.PlacesService(this.map);
       var request = {
         query: location
       };
-      service.textSearch(request, this.callback);
+      service.textSearch(request, function (results, status) {
+        poly.callback(results, status, poly);
+      });
     }
   })
 </script>

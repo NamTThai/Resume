@@ -20,19 +20,21 @@
   </style>
 
   <template>
-    <div>[[project.title]]</div>
-    <div>[[project.date]]</div>
-    <ul id="description">
-      <template is="dom-repeat" items="[[project.description]]">
-        <li class="description-item">[[item]]</li>
-      </template>
-    </ul>
-    <div class="row">
-      <template is="dom-repeat" items="[[project.images]]">
-        <a href="[[item]]" target="_blank">
-          <iron-image class="project-demo" src="[[item]]" preload fade sizing="contain"></iron-image>
-        </a>
-      </template>
+    <div class="section-wrapper">
+      <div class="section-header">[[project.title]]</div>
+      <div class="section-subheader">[[project.date]]</div>
+      <ul id="description">
+        <template is="dom-repeat" items="[[project.description]]">
+          <li class="description-item">[[item]]</li>
+        </template>
+      </ul>
+      <div class="row">
+        <template is="dom-repeat" items="[[project.images]]">
+          <a href="[[item]]" target="_blank">
+            <iron-image class="project-demo" src="[[item]]" preload fade sizing="contain"></iron-image>
+          </a>
+        </template>
+      </div>
     </div>
   </template>
 </dom-module>

@@ -1,0 +1,56 @@
+<dom-module id="contact-info">
+  <style>
+    .media-col {
+      padding: 6px 0 6px 24px
+    }
+
+    .media-title {
+      color: #DCE775;
+    }
+
+    .media-content {
+      color: white;
+    }
+  </style>
+
+  <template>
+    <div id="contactWrapper">
+      <div class="row">
+        <div class="media-col col-2">
+          <span class="media-title">mobile</span>
+          <span class="media-content">[[contacts.mobile]]</span>
+        </div>
+        <div class="media-col col-3">
+          <span class="media-title">email</span>
+          <span class="media-content">[[contacts.email]]</span>
+        </div>
+        <div class="media-col col-2">
+          <span class="media-title">github</span>
+          <span class="media-content">[[contacts.github]]</span>
+        </div>
+        <div class="media-col col-2">
+          <span class="media-title">twitter</span>
+          <span class="media-content">[[contacts.twitter]]</span>
+        </div>
+        <div class="media-col col-3">
+          <span class="media-title">location</span>
+          <span class="media-content">[[contacts.location]]</span>
+        </div>
+      </div>
+    </div>
+  </template>
+</dom-module>
+
+<script>
+  Polymer({
+    is: "contact-info",
+
+    properties: {
+      contacts: Array
+    },
+
+    setBackgroundColor: function(color) {
+      this.$.contactWrapper.style.backgroundColor = color;
+    }
+  });
+</script>

@@ -3,22 +3,24 @@
   </style>
 
   <template>
-    <div class="row">
-      <span id="employer">[[job.employer]]</span>
-      &nbsp;<span>-</span>&nbsp;
-      <span id="title">[[job.title]]</span>
-    </div>
-    <div class="row">
-      <span id="date">[[job.date]]</span>
-      <span class="flex"></span>
-      <span id="location">[[job.location]]</span>
-    </div>
-    <div>
-      <ul>
-        <template is="dom-repeat" items="[[job.description]]">
-          <li>[[item]]</li>
-        </template>
-      </ul>
+    <div class="section-wrapper">
+      <div class="section-header" class="row">
+        <span>[[job.employer]]</span>
+        &nbsp;<span>-</span>&nbsp;
+        <span>[[job.title]]</span>
+      </div>
+      <div id="section-subheader" class="row">
+        <span>[[job.date]]</span>
+        <span class="flex"></span>
+        <span>[[job.location]]</span>
+      </div>
+      <div>
+        <ul>
+          <template is="dom-repeat" items="[[job.description]]">
+            <li>[[item]]</li>
+          </template>
+        </ul>
+      </div>
     </div>
   </template>
 </dom-module>

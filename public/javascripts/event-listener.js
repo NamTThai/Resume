@@ -3,7 +3,7 @@ document.addEventListener('WebComponentsReady', function() {
   var eventListener = document.querySelector('#eventListener');
 
   eventListener.addLocationToMap = function(event) {
-    var map = document.querySelector("#map");
+    var map = document.querySelector("interactive-map");
     map.addLocationToMap(event.detail.location);
   };
 
@@ -31,6 +31,12 @@ document.addEventListener('WebComponentsReady', function() {
     }
   };
 
+  eventListener.setContacts = function(event) {
+    var contactInfo = document.querySelector("#contactInfo");
+    contactInfo.contacts = event.detail.contacts;
+    contactInfo.setBackgroundColor("#263238");
+  };
+
   eventListener.reroute = function(event) {
     _scrollToSection(event.target.parentNode.getAttribute("hash"));
   };
@@ -39,6 +45,10 @@ document.addEventListener('WebComponentsReady', function() {
     document.querySelector("#mainDrawerPanel").closeDrawer();
     _scrollToSection(event.target.getAttribute("hash"));
   };
+
+  $(document).click(function(loc) {
+    _logClicks(loc.clientX, loc.clientY);
+  });
 
 });
 
@@ -50,6 +60,10 @@ function _expandHeader() {
   if (!window.matchMedia("only screen and (max-width:" + headerResponsiveScreenSize + ")").matches) {
     document.querySelector("#headerNavigation").classList.add("tallHeader");
   }
+}
+
+function _logClicks(x, y) {
+  console.log('x location: ' + x + '; y location: ' + y);
 }
 
 function _scrollToSection(section) {

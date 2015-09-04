@@ -3,19 +3,21 @@
   </style>
 
   <template>
-    <div class="row">
-      <span id="name">[[school.name]]</span>
-      &nbsp;<span>-</span>&nbsp;
-      <span id="degree">[[school.degree]]</span>
-    </div>
-    <div class="row">
-      <span id="year">[[school.year]]</span>
-      <span class="flex"></span>
-      <span id="location">[[school.location]]</span>
-    </div>
-    <div class="row">
-      <span>Major:</span>&nbsp;
-      <span>[[school.major]]</span>
+    <div class="section-wrapper">
+      <div class="section-header row">
+        <span id="name">[[school.name]]</span>
+        &nbsp;<span>-</span>&nbsp;
+        <span id="degree">[[school.degree]]</span>
+      </div>
+      <div class="section-subheader row">
+        <span id="year">[[school.year]]</span>
+        <span class="flex"></span>
+        <span id="location">[[school.location]]</span>
+      </div>
+      <div class="row">
+        <span>Major:</span>&nbsp;
+        <span>[[school.major]]</span>
+      </div>
     </div>
   </template>
 </dom-module>
