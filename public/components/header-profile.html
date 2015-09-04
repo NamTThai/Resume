@@ -53,6 +53,7 @@
 
     initialize: function(header) {
       this.header = header;
+      this.fire('new-location', {bubbles: true, location: this.header.contacts.location});
     }
   });
 </script>

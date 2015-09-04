@@ -29,8 +29,8 @@
 
   <!-- My components in development -->
   <link rel="import" href="components/custom-style.html">
-  <link rel="import" href="components/event-listener.html">
   <link rel="import" href="components/header-profile.html">
+  <link rel="import" href="components/interactive-map.html">
   <link rel="import" href="components/online-course.html">
   <link rel="import" href="components/project-experience.html">
   <link rel="import" href="components/resource-num.html">
@@ -54,7 +54,7 @@
           <paper-material id="navigationbar" class="paper-header" elevation="2">
             <header id="headerNavigation" class="tallHeader">
               <div id="subHeaderNavigation" class="row">
-                <iron-image id="profilePict" src="images/profile.png" preload fade sizing="contain"></iron-image>
+                <iron-image id="profilePict" class="circle-image" src="images/profile.png" preload fade sizing="contain"></iron-image>
                 <h1 id="headerTitle">NAM THAI</h1>
                 <span class="flex"></span>
                 <paper-button class="navigationbar-button" on-click="reroute" hash="#works">
@@ -81,7 +81,7 @@
             </header>
           </paper-material>
 
-          <div id="portfolioContent" class="content">
+          <div id="portfolioContent" class="content" on-new-location="addLocationToMap">
             <section id="bumper"></section>
             <section id="works">
               <h2 class="portfolio-content-header">Work Experiences</h2>
@@ -97,6 +97,7 @@
             </section>
             <section id="trail">
               <h2 class="portfolio-content-header">Where I Have Worked and Lived</h2>
+              <interactive-map></interactive-map>
             </section>
             <section id="contact">
 

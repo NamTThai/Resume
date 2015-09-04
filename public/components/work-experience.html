@@ -30,6 +30,7 @@
     initialize: function(job) {
       job.date = this.setDate(job.dateStart, job.dateEnd);
       this.job = job;
+      this.fire('new-location', {bubbles: true, location: job.location});
     },
 
     setDate: function(dateStart, dateEnd) {

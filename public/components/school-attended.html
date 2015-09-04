@@ -28,6 +28,7 @@
       school.major = school.majors.join(", ");
       school.year = (new Date(school.dates)).getFullYear();
       this.school = school;
+      this.fire("new-location", {bubbles: true, location: school.location});
     }
   })
 </script>

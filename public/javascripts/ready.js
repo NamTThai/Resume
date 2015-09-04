@@ -7,8 +7,8 @@ document.addEventListener("WebComponentsReady", function() {
         var parent = data.parent;
         data.data.forEach(function(d) {
           var object = document.createElement(component);
-          object.initialize(d);
           $(parent).append(object);
+          object.initialize(d);
         });
       });
     });
